@@ -17,13 +17,40 @@ struct EmployeeView: View {
                     .font(.title).bold()
                 Text(employee.position)
                     .fontWeight(.semibold)
+                
+                
                 Button {
+                    if let url = URL(string: "mailto:\(employee.email)") {
+                        
+                        if UIApplication.shared.canOpenURL(url) {
+                            UIApplication.shared.open(url)
+                        }
+                    }
                     
                 } label: {
-                    Text(employee.email)
+                    HStack {
+                        Image(systemName: "envelope")
+                        Text(employee.email)
+                    }
                 }
+                .buttonStyle(.borderless)
+               
                 
-                Text(employee.phone)
+                Button {
+                    if let url = URL(string: "tel:\(employee.phone)") {
+                        
+                        if UIApplication.shared.canOpenURL(url) {
+                            UIApplication.shared.open(url)
+                        }
+                    
+                    }
+                } label: {
+                    HStack {
+                        Image(systemName: "phone")
+                        Text(employee.phone)
+                    }
+                }
+                .buttonStyle(.borderless)
             }
         }
     }
