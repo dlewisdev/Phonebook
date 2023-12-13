@@ -8,11 +8,27 @@
 import SwiftUI
 
 struct EmployeeView: View {
+    var employees: [Employee]
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List(employees) { employee in
+            VStack(alignment: .leading) {
+                Text(employee.name)
+                    .font(.title).bold()
+                Text(employee.position)
+                    .fontWeight(.semibold)
+                Button {
+                    
+                } label: {
+                    Text(employee.email)
+                }
+                
+                Text(employee.phone)
+            }
+        }
     }
 }
 
 #Preview {
-    EmployeeView()
+    EmployeeView(employees: [Employee(name: "Danielle", position: "iOS Developer", email: "dlewisdev@dev.com", phone: "1-281-330-8004")])
 }
