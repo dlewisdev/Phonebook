@@ -8,8 +8,25 @@
 import SwiftUI
 
 struct CompanyView: View {
+    @State var companies = [Company]()
+    var dataService = DataService()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            VStack {
+                List(companies) { company in
+                    NavigationLink {
+                        DepartmentView(departments: company.departments)
+                    } label: {
+                        Text(company.companyName)
+                    }
+                }
+            }
+            .onAppear {
+                companies = dataService.getData()
+            }
+            .navigationTitle("Companies")
+        }
     }
 }
 
