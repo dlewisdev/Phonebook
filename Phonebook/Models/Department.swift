@@ -6,3 +6,14 @@
 //
 
 import Foundation
+
+struct Department: Identifiable, Decodable {
+    let id = UUID()
+    var departmentName: String
+    var employees: [Employee]
+    
+    enum CodingKeys: String, CodingKey {
+        case departmentName = "department_name"
+        case employees
+    }
+}
