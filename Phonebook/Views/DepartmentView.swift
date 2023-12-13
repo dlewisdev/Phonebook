@@ -8,11 +8,20 @@
 import SwiftUI
 
 struct DepartmentView: View {
+    var departments: [Department]
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List(departments) { department in
+            NavigationLink {
+                EmployeeView(employees: department.employees)
+            } label: {
+                Text(department.departmentName)
+            }
+            
+        }
     }
 }
 
 #Preview {
-    DepartmentView()
+    DepartmentView(departments: [Department(departmentName: "iOS Development", employees: [Employee(name: "Danielle", position: "iOS Developer", email: "dlewisdev@dev.com", phone: "1-281-330-8004")])])
 }
