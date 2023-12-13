@@ -11,6 +11,14 @@
 		719284C42B2950E800965797 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719284C32B2950E800965797 /* ContentView.swift */; };
 		719284C62B2950E800965797 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 719284C52B2950E800965797 /* Assets.xcassets */; };
 		719284C92B2950E800965797 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 719284C82B2950E800965797 /* Preview Assets.xcassets */; };
+		719284D02B29514300965797 /* PBData.json in Resources */ = {isa = PBXBuildFile; fileRef = 719284CF2B29514300965797 /* PBData.json */; };
+		719284D22B29516700965797 /* CompanyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719284D12B29516700965797 /* CompanyView.swift */; };
+		719284D42B29516E00965797 /* DepartmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719284D32B29516E00965797 /* DepartmentView.swift */; };
+		719284D62B29517400965797 /* EmployeeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719284D52B29517400965797 /* EmployeeView.swift */; };
+		719284DA2B2952A600965797 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719284D92B2952A600965797 /* Company.swift */; };
+		719284DC2B2952AF00965797 /* Department.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719284DB2B2952AF00965797 /* Department.swift */; };
+		719284DE2B2952B700965797 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719284DD2B2952B700965797 /* Employee.swift */; };
+		719284E12B2953C700965797 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719284E02B2953C700965797 /* DataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +27,14 @@
 		719284C32B2950E800965797 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		719284C52B2950E800965797 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		719284C82B2950E800965797 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		719284CF2B29514300965797 /* PBData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PBData.json; sourceTree = "<group>"; };
+		719284D12B29516700965797 /* CompanyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyView.swift; sourceTree = "<group>"; };
+		719284D32B29516E00965797 /* DepartmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentView.swift; sourceTree = "<group>"; };
+		719284D52B29517400965797 /* EmployeeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeView.swift; sourceTree = "<group>"; };
+		719284D92B2952A600965797 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		719284DB2B2952AF00965797 /* Department.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Department.swift; sourceTree = "<group>"; };
+		719284DD2B2952B700965797 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
+		719284E02B2953C700965797 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +67,12 @@
 		719284C02B2950E800965797 /* Phonebook */ = {
 			isa = PBXGroup;
 			children = (
+				719284DF2B2953BC00965797 /* Service */,
+				719284D82B29529900965797 /* Models */,
+				719284D72B29528800965797 /* Views */,
 				719284C12B2950E800965797 /* PhonebookApp.swift */,
 				719284C32B2950E800965797 /* ContentView.swift */,
+				719284CF2B29514300965797 /* PBData.json */,
 				719284C52B2950E800965797 /* Assets.xcassets */,
 				719284C72B2950E800965797 /* Preview Content */,
 			);
@@ -65,6 +85,34 @@
 				719284C82B2950E800965797 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		719284D72B29528800965797 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				719284D52B29517400965797 /* EmployeeView.swift */,
+				719284D12B29516700965797 /* CompanyView.swift */,
+				719284D32B29516E00965797 /* DepartmentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		719284D82B29529900965797 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				719284D92B2952A600965797 /* Company.swift */,
+				719284DB2B2952AF00965797 /* Department.swift */,
+				719284DD2B2952B700965797 /* Employee.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		719284DF2B2953BC00965797 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				719284E02B2953C700965797 /* DataService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +173,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				719284D02B29514300965797 /* PBData.json in Resources */,
 				719284C92B2950E800965797 /* Preview Assets.xcassets in Resources */,
 				719284C62B2950E800965797 /* Assets.xcassets in Resources */,
 			);
@@ -137,8 +186,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				719284E12B2953C700965797 /* DataService.swift in Sources */,
 				719284C42B2950E800965797 /* ContentView.swift in Sources */,
+				719284DE2B2952B700965797 /* Employee.swift in Sources */,
 				719284C22B2950E800965797 /* PhonebookApp.swift in Sources */,
+				719284D62B29517400965797 /* EmployeeView.swift in Sources */,
+				719284D42B29516E00965797 /* DepartmentView.swift in Sources */,
+				719284D22B29516700965797 /* CompanyView.swift in Sources */,
+				719284DC2B2952AF00965797 /* Department.swift in Sources */,
+				719284DA2B2952A600965797 /* Company.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
